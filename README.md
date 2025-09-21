@@ -42,27 +42,9 @@ BucketInfo getBucketState(String userId)
 - Java 11 or higher
 - Maven 3.6+
 
-### Building the Project
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd leaky-rate-limiter
-
-# Build and run tests
-mvn clean compile
-mvn test
-
-# Generate test coverage report
-mvn jacoco:report
-```
-
 ### Basic Usage
 
 ```java
-import org.example.RateLimiterFactory;
-import org.example.LeakyBucketRateLimiter;
-import org.example.model.RateLimiterResult;
 
 // Create a rate limiter with capacity of 5 and leak rate of 1.0 units/second
 LeakyBucketRateLimiter limiter = RateLimiterFactory.createRateLimiter(5, 1.0);
@@ -275,11 +257,3 @@ public boolean canUserPerformAction(String userId) {
     return result.isAllowed();
 }
 ```
-
-## License
-
-This project is provided as a programming test implementation.
-
-## Contributing
-
-This is a test project, but feedback and suggestions are welcome.
